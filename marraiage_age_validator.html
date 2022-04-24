@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      
+        #myForm{
+            display: grid;
+            margin: auto;
+            width: 15%;
+            margin-top: 50px;
+        }
+        input{
+            padding: 7px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        #gender{
+            padding: 7px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        button{
+            padding: 6px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body> 
+ <form id="myForm">
+    <select id="gender">
+		<option value="">select your gender</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+    <input type="text" id="age" placeholder="Enter your age" />
+
+    <button onclick="checkEligiblityForMarried()">
+        Check Eligiblity For Marriage
+    </button>
+</form>
+
+    <script type="text/javascript">
+        function checkEligiblityForMarried() {
+            var gender = document.getElementById("gender").value;
+            var age = document.getElementById("age").value;
+            if (gender == "female" && age >= 18) {
+                alert("Valid legal age to get married");
+            } else if (gender == "male" && age >= 21) {
+                alert("Valid legal age to get married");
+            } else {
+                alert(" Not valid legal age to get married");
+            }
+        }
+    </script>
+</body>
+
+</html>
